@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function List() {
+  const [editMode, setEditMode] = useState(false)
+
   return (
     <ul className='list'>
       <li className='list__item'>
-        <span className='list__item-controls'>
+        <span
+          className={`list__item-controls
+          ${editMode ? 'list__item-controls--visible' : ''}`}
+        >
           <input className='list__item-checkbox' type='checkbox' />
         </span>
         <h4 className='list__item-title'>Lorem, ipsum dolor</h4>
