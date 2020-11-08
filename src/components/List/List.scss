@@ -3,6 +3,13 @@
   margin: unset;
   padding: unset;
 
+  &__item {
+    display: grid;
+    grid-template-areas: auto 1fr;
+    grid-gap: var(--p);
+    padding: var(--p) 0;
+  }
+
   &__item-controls {
     display: none;
 
@@ -11,7 +18,15 @@
     }
   }
 
-  &__item {
-    display: flex;
+  &__item-title {
+    margin: unset;
+  }
+
+  &__item-preview {
+    margin: unset;
+    max-height: calc(1em * var(--line-height-preview));
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }

@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-export default function List(editMode) {
-  const [localEditMode] = useState(false)
-
+export default function List({ editMode: localEditMode }) {
   return (
     <ul className='list'>
       <li className='list__item'>
         <span
-          className={`list__item-controls
-          ${localEditMode ? 'list__item-controls--visible' : ''}`}
+          className={`list__item-controls ${
+            localEditMode ? 'list__item-controls--visible' : ''
+          }`}
         >
           <input className='list__item-checkbox' type='checkbox' />
         </span>

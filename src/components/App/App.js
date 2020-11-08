@@ -3,7 +3,6 @@ import List from '../List/List'
 
 export default function App() {
   const [editMode, setEditMode] = useState(false)
-
   return (
     <main>
       <div className='app'>
