@@ -20,7 +20,7 @@ body {
   border-radius: var(--border-radius);
   box-shadow: 0 8px 32px rgba(black, 0.1), 0 56px 48px -16px rgba(black, 0.1);
   height: 50.75rem;
-  padding: var(--p);
+  padding: calc(var(--p) * 2);
   margin: auto;
   width: 23.4375rem;
 }

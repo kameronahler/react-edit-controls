@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   padding: calc(var(--p) * 2) calc(var(--p) * 2) calc(var(--p) * 3);
-  margin: calc(-1 * var(--p));
+  margin: calc(-2 * var(--p)) calc(-2 * var(--p)) 0 calc(-2 * var(--p));
 
   &__title {
     margin-bottom: 0;
