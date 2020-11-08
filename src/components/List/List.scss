@@ -1,28 +1,45 @@
 .list {
   list-style-type: none;
   margin: unset;
+  overflow-x: hidden;
   padding: unset;
 
   &__item {
+    border-bottom: 1px solid var(--color-header-bg);
     display: grid;
     grid-template-areas: auto 1fr;
-    grid-gap: var(--p);
+    grid-row-gap: var(--p);
     padding: var(--p) 0;
-  }
+    transition: transform 0.2s ease-out;
+    width: calc(100% + var(--w-item-controls));
+    transform: translateX(calc(-1 * var(--w-item-controls)));
 
-  &__item-controls {
-    display: none;
-
-    &--visible {
-      display: block;
+    &--controls-visible {
+      transform: translateX(0);
+      width: 100%;
     }
   }
 
+  &__item-controls {
+    display: flex;
+    height: 3.25rem;
+    grid-row: 1/3;
+    grid-column: 1/2;
+    width: var(--w-item-controls);
+    padding: var(--p) var(--p) var(--p) 0;
+  }
+
+  &__item-checkbox {
+    margin: auto;
+  }
+
   &__item-title {
+    grid-column: 2/3;
     margin: unset;
   }
 
   &__item-preview {
+    grid-column: 2/3;
     margin: unset;
     max-height: calc(1em * var(--line-height-preview));
     overflow: hidden;

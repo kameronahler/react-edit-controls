@@ -3,12 +3,12 @@ import React from 'react'
 export default function List({ editMode: localEditMode }) {
   return (
     <ul className='list'>
-      <li className='list__item'>
-        <span
-          className={`list__item-controls ${
-            localEditMode ? 'list__item-controls--visible' : ''
-          }`}
-        >
+      <li
+        className={`list__item ${
+          localEditMode ? 'list__item--controls-visible' : ''
+        }`}
+      >
+        <span className='list__item-controls'>
           <input className='list__item-checkbox' type='checkbox' />
         </span>
         <h4 className='list__item-title'>Lorem, ipsum dolor</h4>
