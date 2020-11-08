@@ -1,0 +1,22 @@
+.header {
+  background-color: var(--color-header-bg);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  padding: calc(var(--p) * 2) calc(var(--p) * 2) calc(var(--p) * 3);
+  margin: calc(-1 * var(--p));
+
+  &__title {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  &__controls {
+    align-self: center;
+  }
+  &__edit {
+    background-color: unset;
+    border: unset;
+    color: var(--color-edit);
+  }
+}

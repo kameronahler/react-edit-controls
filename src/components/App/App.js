@@ -6,8 +6,10 @@ export default function App() {
   return (
     <main>
       <div className='app'>
-        <Header />
-        <List />
+        <div className='container'>
+          <Header />
+          <List />
+        </div>
       </div>
     </main>
   )
