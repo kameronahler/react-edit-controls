@@ -3,6 +3,14 @@
   margin: unset;
   padding: unset;
 
+  &__item-controls {
+    display: none;
+
+    &--visible {
+      display: block;
+    }
+  }
+
   &__item {
     display: flex;
   }

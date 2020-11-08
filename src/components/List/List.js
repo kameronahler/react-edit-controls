@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 
-export default function List() {
-  const [editMode, setEditMode] = useState(false)
+export default function List(editMode) {
+  const [localEditMode] = useState(false)
 
   return (
     <ul className='list'>
       <li className='list__item'>
         <span
           className={`list__item-controls
-          ${editMode ? 'list__item-controls--visible' : ''}`}
+          ${localEditMode ? 'list__item-controls--visible' : ''}`}
         >
           <input className='list__item-checkbox' type='checkbox' />
         </span>
